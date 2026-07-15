@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun With Friends — free games to play with friends online, no download</title>
+<meta name="description" content="Free games to play with friends online — no download, no sign-up. Everyone plays together on their own phone; you just share a four-letter code. Perfect for a night in or a video call.">
+<meta name="keywords" content="games to play with friends online, free party games no download, games to play with friends online free no download, group games on phones, online games for a video call">
+<meta name="robots" content="noindex"><!-- BETA: this is the SEO doorway — remove this line + the FREE BETA chip at launch -->
+<link rel="canonical" href="https://funwithfriends.party/">
+<meta property="og:title" content="Fun With Friends — free games to play with friends, no download">
+<meta property="og:description" content="The easiest fun you'll have with friends this month. Everyone plays on their own phone — nothing to download, nobody signs up. Share a code and you're in.">
+<meta property="og:url" content="https://funwithfriends.party/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://letsplay.party/assets/mj/12_funwithfriends_hero.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fun With Friends — free games to play with friends, no download">
+<meta name="twitter:description" content="Everyone plays on their own phone. No downloads, no accounts. Share a four-letter code and you're in.">
+<meta name="twitter:image" content="https://letsplay.party/assets/mj/12_funwithfriends_hero.jpeg">
+<link rel="icon" type="image/png" sizes="48x48" href="https://letsplay.party/assets/icon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://letsplay.party/assets/icon-32.png">
+<link rel="apple-touch-icon" href="https://letsplay.party/assets/icon-180.png">
+<style>
+  :root {
+    --bg:#0d0912; --panel:#171021; --panel2:#1f1530; --ink:#f4f0ff; --dim:#9a8fb8;
+    --coral:#ff5470; --lime:#c8ff4d; --lav:#b9a8ff; --warm:#ffb27a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:var(--bg); color:var(--ink); min-height:100vh;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:flex; flex-direction:column; align-items:center;
+    /* warmer glow than letsplay's cool purple — golden evening light to match the register */
+    background-image:radial-gradient(ellipse 90% 55% at 50% -8%, #4a2a2f 0%, #2a1a3a 34%, transparent 62%);
+    line-height:1.4;
+  }
+  a { color:inherit; text-decoration:none; }
+  .wrap { width:min(1100px,94vw); padding:24px 0 64px; flex:1; display:flex; flex-direction:column; }
+  .topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .logo { font-weight:900; letter-spacing:-.02em; font-size:clamp(22px,3.4vw,32px); }
+  .logo .a { color:var(--warm); } .logo .b { color:var(--lime); } .logo .dot { color:var(--coral); }
+  .beta { display:inline-block; margin-left:10px; font-size:11px; font-weight:800; letter-spacing:.12em;
+          color:var(--bg); background:var(--lime); border-radius:999px; padding:3px 10px; vertical-align:middle; }
+  .toplink { color:var(--dim); font-size:14px; font-weight:600; }
+  .toplink b { color:var(--lav); }
+
+  /* HERO */
+  .hero { text-align:center; margin-top:7vh; }
+  .kick { color:var(--warm); font-weight:800; letter-spacing:.22em; font-size:clamp(11px,1.5vw,13px); text-transform:uppercase; }
+  .hero h1 { font-size:clamp(38px,6.6vw,86px); font-weight:900; letter-spacing:-.035em; line-height:1.03; margin-top:14px; }
+  .hero h1 em { font-style:normal; color:var(--warm); }
+  .hero .lede { color:#cabde6; font-size:clamp(16px,2vw,21px); margin:22px auto 0; max-width:660px; }
+  .cta-row { display:flex; gap:14px; justify-content:center; margin-top:38px; flex-wrap:wrap; }
+  .btn { display:inline-block; border:none; cursor:pointer; font-weight:800; border-radius:16px; font-size:19px;
+         padding:18px 34px; transition:transform .08s ease; }
+  .btn:active { transform:scale(.96); }
+  .btn-go { background:var(--coral); color:#fff; box-shadow:0 8px 40px #ff547055; }
+  .btn-join { background:var(--panel2); color:var(--ink); border:2px solid #342552; }
+  .reassure { color:var(--dim); font-size:14px; margin-top:22px; }
+  .reassure b { color:var(--lime); }
+  .solo { margin-top:14px; }
+  .solo a { color:var(--lav); font-size:15px; font-weight:600; border-bottom:1px dashed #4a3a6a; padding-bottom:2px; }
+
+  /* hero photo band */
+  .heroimg { margin:44px auto 0; max-width:940px; border-radius:24px; overflow:hidden;
+             border:1px solid #2a1d42; box-shadow:0 24px 80px #00000066; position:relative; }
+  .heroimg img { display:block; width:100%; height:auto; }
+  .heroimg .cap { position:absolute; left:0; right:0; bottom:0; padding:22px 20px 16px; text-align:center;
+                  font-weight:700; font-size:clamp(14px,1.8vw,17px); color:#fff;
+                  background:linear-gradient(to top, rgba(13,9,18,.92), rgba(13,9,18,0)); }
+
+  /* section shell */
+  .sec { margin:64px auto 0; max-width:1000px; width:100%; }
+  .sec-title { color:var(--lav); font-weight:800; letter-spacing:.24em; font-size:13px; text-transform:uppercase; text-align:center; }
+  .sec-sub { color:var(--dim); text-align:center; font-size:15px; margin-top:10px; max-width:620px; margin-left:auto; margin-right:auto; }
+
+  /* how it works */
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:22px; }
+  .step { background:var(--panel); border:1px solid #2a1d42; border-radius:18px; padding:22px 20px; text-align:left; }
+  .step .n { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:10px;
+             background:var(--warm); color:var(--bg); font-weight:900; font-size:17px; }
+  .step .st { font-weight:900; font-size:18px; margin-top:14px; }
+  .step .sp { color:var(--dim); font-size:14.5px; margin-top:8px; line-height:1.55; }
+
+  /* games shelf */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:22px; }
+  .card { background:var(--panel); border:1px solid #2a1d42; border-radius:16px; padding:16px; text-align:left; min-height:150px;
+          display:flex; flex-direction:column; }
+  a.card.play { cursor:pointer; border-color:#3f5a1a; transition:transform .08s; }
+  a.card.play:hover { transform:translateY(-2px); }
+  a.card.play:active { transform:scale(.97); }
+  .card.art { position:relative; overflow:hidden; min-height:186px; justify-content:flex-end;
+              background-size:cover; background-position:center; background-repeat:no-repeat; }
+  .card.art::after { content:""; position:absolute; inset:0; pointer-events:none;
+              background:linear-gradient(to top, rgba(13,9,18,.96) 0%, rgba(13,9,18,.72) 36%, rgba(13,9,18,.1) 76%, rgba(13,9,18,0) 100%); }
+  .card.art > * { position:relative; z-index:1; }
+  .card.art .tag { position:absolute; top:14px; left:16px; z-index:2; }
+  .tag { align-self:flex-start; font-size:10px; font-weight:900; letter-spacing:.12em; color:var(--bg);
+         background:var(--lime); border-radius:999px; padding:2px 9px; }
+  .tag.soon { background:var(--panel2); color:var(--dim); border:1px solid #342552; }
+  .cname { font-weight:900; font-size:17px; margin-top:10px; }
+  .card.art .cname { text-shadow:0 2px 8px rgba(13,9,18,.9); }
+  .cdesc { color:var(--dim); font-size:13.5px; margin-top:5px; line-height:1.4; }
+  .card.art .cdesc { text-shadow:0 1px 6px rgba(13,9,18,.95); }
+
+  /* why easy */
+  .why { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:22px; }
+  .wcard { background:var(--panel); border:1px solid #2a1d42; border-radius:16px; padding:20px; text-align:left; }
+  .wcard .we { font-size:26px; }
+  .wcard .wt { font-weight:900; font-size:16px; margin-top:8px; }
+  .wcard .wp { color:var(--dim); font-size:13.5px; margin-top:5px; line-height:1.5; }
+
+  /* pricing */
+  .prices { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:22px; }
+  .pcard { background:var(--panel); border:1px solid #2a1d42; border-radius:16px; padding:22px 16px; text-align:center; }
+  .pcard.best { border-color:var(--coral); box-shadow:0 0 30px #ff547022; }
+  .pcard .pt { font-weight:800; color:var(--lav); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
+  .pcard .pp { font-weight:900; font-size:32px; margin-top:6px; }
+  .pcard .pd { color:var(--dim); font-size:13px; margin-top:8px; line-height:1.45; }
+  .fine { color:var(--dim); font-size:13.5px; margin-top:18px; text-align:center; }
+
+  /* final cta */
+  .final { margin:70px auto 0; text-align:center; }
+  .final h2 { font-size:clamp(28px,4.4vw,46px); font-weight:900; letter-spacing:-.03em; }
+  .final p { color:var(--dim); margin-top:12px; font-size:16px; }
+
+  /* footer */
+  footer { margin-top:64px; text-align:center; color:var(--dim); font-size:13.5px; line-height:1.7; }
+  footer a { color:var(--lav); font-weight:700; }
+  footer .same { max-width:560px; margin:0 auto 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="logo">fun with <span class="a">friends</span><span class="dot">.</span><span class="beta">FREE BETA</span></div>
+    <div class="toplink">Same games, same rooms as <b>letsplay.party</b></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="kick">Games to play with friends · free · no download</div>
+    <h1>The easiest fun you'll<br>have with friends <em>this month</em>.</h1>
+    <p class="lede">Free games you play together — everyone on their own phone. Nothing to download, nobody makes an account. Share a four-letter code and you're in. Works around a table or over a video call, exactly the same.</p>
+    <div class="cta-row">
+      <a class="btn btn-go" href="https://letsplay.party/">Start a game — it's free →</a>
+      <a class="btn btn-join" href="https://letsplay.party/play/">Join with a code</a>
+    </div>
+    <div class="reassure"><b>Free</b> while we're in beta · No app · No sign-up · 3–12 friends · Any phone works</div>
+    <div class="solo"><a href="https://letsplay.party/">No one around tonight? Play solo against the bots →</a></div>
+
+    <div class="heroimg">
+      <img src="https://letsplay.party/assets/mj/12_funwithfriends_hero.jpeg" width="1456" height="816"
+           alt="Four friends around a kitchen table crying with laughter, phones in hand, warm evening light">
+      <div class="cap">This, but it's a Tuesday and you found it in ten seconds.</div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="sec">
+    <div class="sec-title">How it works</div>
+    <div class="sec-sub">Three steps, about ten seconds, zero setup. Nobody installs anything.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <div class="st">Open it on any screen</div>
+        <div class="sp">Put it on a TV or laptop — or just hold up your phone. Pick a game and you'll get a four-letter room code.</div>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div class="st">Everyone joins in seconds</div>
+        <div class="sp">Friends type the code on their own phones — no download, no account, no waiting. On a call? Share your screen and they join the same way.</div>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div class="st">Play together, laugh together</div>
+        <div class="sp">The big screen runs the show. Everyone writes, votes and points from their phone. That's the whole thing — you're playing.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMES -->
+  <div class="sec">
+    <div class="sec-title">Pick a game — tap to start</div>
+    <div class="sec-sub">All free to play. Every one works with friends in the room or friends on a call.</div>
+    <div class="grid">
+      <a class="card play art" href="https://letsplay.party/" style="background-image:url(https://letsplay.party/assets/cards/hot_takes.webp)"><span class="tag">PLAY FREE</span><div class="cname">🔥 Hot Takes</div><div class="cdesc">Write something funny, then watch the room vote. Gentle, glorious chaos.</div></a>
+      <a class="card play art" href="https://letsplay.party/" style="background-image:url(https://letsplay.party/assets/cards/most_likely.webp)"><span class="tag">PLAY FREE</span><div class="cname">👉 Most Likely To</div><div class="cdesc">No typing — just point at whoever fits. The votes are always a surprise.</div></a>
+      <a class="card play art" href="https://letsplay.party/" style="background-image:url(https://letsplay.party/assets/cards/trivia.webp)"><span class="tag">PLAY FREE</span><div class="cname">👑 Trivia Royale</div><div class="cdesc">Ten questions, everyone plays at once. Friendly bragging rights on the line.</div></a>
+      <a class="card play art" href="https://letsplay.party/" style="background-image:url(https://letsplay.party/assets/cards/world.webp)"><span class="tag">PLAY FREE</span><div class="cname">🌍 Where in the World</div><div class="cdesc">See a place, drop a pin, closest guess wins. There's a free daily one too.</div></a>
+      <a class="card play" href="https://letsplay.party/"><span class="tag">PLAY FREE</span><div class="cname">🗣 Accent Roulette</div><div class="cdesc">Hear a voice, guess where it's from. Surprisingly competitive.</div></a>
+      <a class="card play" href="https://letsplay.party/"><span class="tag">PLAY FREE</span><div class="cname">💸 Pin the Price</div><div class="cdesc">Guess what real things cost. You'll be way off — that's the fun.</div></a>
+      <a class="card play" href="https://letsplay.party/"><span class="tag">PLAY FREE</span><div class="cname">🎨 Doodle Duel</div><div class="cdesc">Draw the prompt on your phone. Bad art absolutely welcome.</div></a>
+      <a class="card play" href="https://letsplay.party/"><span class="tag">PLAY FREE</span><div class="cname">⚖️ Objection!</div><div class="cdesc">One friend defends something ridiculous. The rest of you decide their fate.</div></a>
+      <div class="card art" style="background-image:url(https://letsplay.party/assets/cards/after_dark.webp)"><span class="tag soon">SOON</span><div class="cname">🌶 After Dark</div><div class="cdesc">The 18+ decks. For when the kids have gone home.</div></div>
+      <div class="card art" style="background-image:url(https://letsplay.party/assets/cards/bachelorette.webp)"><span class="tag soon">SOON</span><div class="cname">💍 Bachelorette</div><div class="cdesc">Made for the hen night — the bride is the game.</div></div>
+      <div class="card"><span class="tag soon">SOON</span><div class="cname">⚔️ Gauntlets</div><div class="cdesc">Challenge a friend across town — or the bots — whenever.</div></div>
+    </div>
+  </div>
+
+  <!-- WHY EASY -->
+  <div class="sec">
+    <div class="sec-title">Why it's the easy choice</div>
+    <div class="why">
+      <div class="wcard"><div class="we">📵</div><div class="wt">No download</div><div class="wp">Nobody installs a thing. It's a web page — it just opens.</div></div>
+      <div class="wcard"><div class="we">🙅</div><div class="wt">No sign-up</div><div class="wp">No emails, no passwords, no accounts. Type a name and play.</div></div>
+      <div class="wcard"><div class="we">📱</div><div class="wt">Any phone works</div><div class="wp">iPhone, Android, old or new — everyone's phone is the controller.</div></div>
+      <div class="wcard"><div class="we">💻</div><div class="wt">Great on a call</div><div class="wp">Friends far away? Share your screen and play together in real time.</div></div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="sec">
+    <div class="sec-title">The deal</div>
+    <div class="sec-sub">Free to start, every time. If a night's a good one, the host can unlock the rest — guests never pay.</div>
+    <div class="prices">
+      <div class="pcard"><div class="pt">Tonight</div><div class="pp">Free</div><div class="pd">Every game, full strength, while we're in beta.</div></div>
+      <div class="pcard"><div class="pt">Tonight Pass</div><div class="pp">$6.99</div><div class="pd">One night, every deck unlocked for your whole room. Less than a round of drinks.</div></div>
+      <div class="pcard best"><div class="pt">Forever</div><div class="pp">$19.99</div><div class="pd">Every deck, every night, for good.</div></div>
+    </div>
+    <div class="fine">Only the host ever pays, right from inside the room — and only if you want to. Everyone else always plays free.</div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final">
+    <h2>Friends are over. Now what?</h2>
+    <p>This. Open it, read out the code, and you're two taps from everyone laughing.</p>
+    <div class="cta-row">
+      <a class="btn btn-go" href="https://letsplay.party/">Start a game — it's free →</a>
+      <a class="btn btn-join" href="https://letsplay.party/play/">Join with a code</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="same">funwithfriends.party and <a href="https://letsplay.party/">letsplay.party</a> are the same games and the same rooms — this is just the friendly way in. Start on either; your friends can join from either.</div>
+    <div>Free party games for grown-ups · No app, no accounts · Made for the room and the group chat</div>
+  </footer>
+</div>
+</body>
+</html>
